@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { bookBaseUrl } from "../axiosInstance";
 import { MdDelete } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
+import Navbar from "./Navbar";
 
 const Home = () => {
   const [bookForm, setBookForm] = useState({
@@ -104,6 +105,9 @@ const Home = () => {
   };
 
   return (
+    <>
+<Navbar/>
+
     <div className="min-h-screen bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] px-6 py-10 text-gray-100">
       <div className="max-w-7xl mx-auto space-y-10">
 
@@ -218,6 +222,7 @@ const Home = () => {
 
       </div>
     </div>
+    </>
   );
 };
 
