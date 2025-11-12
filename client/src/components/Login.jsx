@@ -56,7 +56,6 @@ const Login = () => {
           Welcome Back
         </h2>
 
-        {/* Email */}
         <label className="block text-gray-300 mb-1">Email</label>
         <input
           className="w-full mb-4 bg-[#1f2937] text-gray-200 border border-gray-600 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
@@ -67,7 +66,6 @@ const Login = () => {
           onChange={handleChange}
         />
 
-        {/* Password */}
         <label className="block text-gray-300 mb-1">Password</label>
         <input
           type="password"
@@ -78,7 +76,6 @@ const Login = () => {
           onChange={handleChange}
         />
 
-        {/* Button */}
         <button
           type="submit"
           className="w-full bg-green-500 hover:bg-green-600 text-black font-bold py-2 rounded-lg transition"
@@ -86,16 +83,19 @@ const Login = () => {
           Login
         </button>
 
-        {/* Footer Text */}
         <p className="text-center text-gray-400 text-sm mt-4">
           Don't have an account?
-          <NavLink
-            to="/signup"
-            className="text-green-400 hover:underline ml-1"
-          >
+          <NavLink to="/signup" className="text-green-400 hover:underline ml-1">
             Sign Up
           </NavLink>
+
         </p>
+        <div
+          className="text-right text-sm text-green-400 hover:underline cursor-pointer mt-2 flex content-center justify-center"
+          onClick={() => navigate("/forgotpassword")}
+        >
+          Forgot Password?
+        </div>
       </form>
     </div>
   );
